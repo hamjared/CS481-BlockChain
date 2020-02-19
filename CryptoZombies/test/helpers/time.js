@@ -1,3 +1,4 @@
+
 async function increase(duration) {
 
     //first, let's increase time
