@@ -1,13 +1,10 @@
 const Migrations = artifacts.require("Migrations");
 const ZombieOwnership = artifacts.require("ZombieOwnership");
 const ZombieAttack = artifacts.require("ZombieAttack");
-const ERC721 = artifacts.require("ERC721");
 const ZombieHelper = artifacts.require("ZombieHelper");
 const ZombieFeeding = artifacts.require("ZombieFeeding");
 const ZombieFactory = artifacts.require("ZombieFactory");
-const Ownable = artifacts.require("Ownable");
-const SafeMath = artifacts.require("SafeMath");
-const KittyInterface = artifacts.require("KittyInterface");
+// interface contracts do not and cannot be migrated. (ownable, erc721, kittyinterface, safemath)
 
 
 module.exports = function(deployer) {
