@@ -51,8 +51,10 @@ contract ZombieFeeding is ZombieFactory {
   }
 
   function feedOnKitty(uint _zombieId, uint _kittyId) public {
+    //  temporary kluge to use random DNA because can't call MAINNET from RINKEBY
     uint kittyDna;
-    (,,,,,,,,,kittyDna) = kittyContract.getKitty(_kittyId);
+    //(,,,,,,,,,kittyDna) = kittyContract.getKitty(_kittyId);  // the real code
+    kittyDna = uint(keccak256(abi.encodePacked(_kittyId))); // the kluge
     feedAndMultiply(_zombieId, kittyDna, "kitty");
-  }
+}
 }
